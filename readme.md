@@ -25,13 +25,13 @@ This is the most powerful bit, since we will crawl your repository looking for s
 
 The configuration resides either in a file called `documentation.page.json` or as a file inside a folder called `documentation/page.json`. We will read either of those to display your project. This is a plain JSON file with some properties:
 
-key         | description                                    | example
-----------------------------------------------------------------------------------------------------------
-name        | very short identifier for the project          | Statux
-title       | longer identifier for the project              | Statux • The easy React state management library
-description | a paragraph summarizing the project            | A straightforward way of dealing with your ...
-menu        | the top-right menu links for custom domains    | { "Donate": "...", "Github": "...", ... }
-pages       | list the files/folders to crawl                | \["readme.md", "documentation", "examples", ...\]
+| key         | description                                    | example                                             |
+|-------------|------------------------------------------------|-----------------------------------------------------|
+| name        | very short identifier for the project          | Statux                                              |
+| title       | longer identifier for the project              | Statux • The easy React state management library    |
+| description | a paragraph summarizing the project            | A straightforward way of dealing with your ...      |
+| menu        | the top-right menu links for custom domains    | { "Donate": "...", "Github": "...", ... }           |
+| pages       | list the files/folders to crawl                | \["readme.md", "documentation", "examples", ...\]   |
 
 
 > In the future we might accept some other places like a key "documentation" inside the `package.json`.
