@@ -5,36 +5,54 @@ The official docs for [Documentation Page](https://documentation.page/). Talk ab
 
 ## Getting Started
 
-There is a high chance that your documentation already works properly with our system! Try it out with the search of your repository in the homepage:
+There is a high chance that your documentation already works properly! Try it out by searching your repos in our homepage:
 
 https://documentation.page/
 
-Otherwise, you can organize your documentation in three different ways:
+You can organize your documentation broadly in three different ways:
 
 - Single **readme.md** file. Ideal for smaller projects, you can put all the docs in this file and call it a day. [See example](https://documentation.page/github/sindresorhus/meow/).
-- Folder **documentation** with a bunch of markdown files. These will all be concatenated in alphabetic order to generate the full documentation. (TODO: examples).
+- Folder **documentation** with multiple markdown files. These will all be concatenated in alphabetic order to generate the full documentation. (TODO: examples).
 - Custom **documentation.page.json** configuration if you want a different personalized docs organization. See [example config](https://github.com/franciscop/react-test/blob/master/documentation.page.json) with [output website](https://react-test.dev/).
+
+
 
 ## Convention
 
 This is the most powerful bit, since we will crawl your repository looking for some specific helpful bits and use that to generate the website. When possible, we recommend following the convention first, and otherwise adding [some custom configuration](#configuration).
 
+The data that is parsed automatically is similar to the configuration available:
+
+| key         | description                                    | source                                              |
+|-------------|------------------------------------------------|-----------------------------------------------------|
+| name        | very short identifier for the project          | Github API's repo `name`, cleaned up                |
+| title       | longer identifier for the project              | Same as `name`                                      |
+| description | a paragraph summarizing the project            | Github API's repo `description`                     |
+| logo        | absolute path pointing to your project logo    | Any file found called `favicon.png` or `logo.png`   |
+| menu        | the top-right menu links for custom domains    | Configuration **required** for custom domains       |
+| pages       | list the files/folders to crawl                | `documentation` if found or `readme.md` otherwise   |
+
 
 
 ## Configuration
 
-The configuration resides either in a file called `documentation.page.json` or as a file inside a folder called `documentation/page.json`. We will read either of those to display your project. This is a plain JSON file with some properties:
+These are the documentation options right now:
 
 | key         | description                                    | example                                             |
 |-------------|------------------------------------------------|-----------------------------------------------------|
 | name        | very short identifier for the project          | Statux                                              |
 | title       | longer identifier for the project              | Statux • The easy React state management library    |
 | description | a paragraph summarizing the project            | A straightforward way of dealing with your ...      |
+| logo        | absolute path pointing to your project logo    | https://example.com/mylogo.png                      |
 | menu        | the top-right menu links for custom domains    | { "Donate": "...", "Github": "...", ... }           |
 | pages       | list the files/folders to crawl                | \["readme.md", "documentation", "examples", ...\]   |
 
+They are the keys of a JSON file, which can be either of these:
 
-> In the future we might accept some other places like a key "documentation" inside the `package.json`.
+- `documentation.page.json`: a file on the root of the project
+- `documentation/page.json`: a file called `page.json` inside a folder called `documentation`
+- [not yet] the key `documentation` inside your `package.json`
+
 
 ### name
 
@@ -56,9 +74,17 @@ Longer identifier for the project, possibly stating the tagline. It will be visi
 
 A paragraph summarizing the project funcionality and competitive advantages. This appears in:
 
-  - Google search description
-  - Share card preview description
-  
+- Google search description
+- Share card preview description
+
+
+### logo
+
+An absolute path to the image associated with the logo of your project. It can only be in `.png` right now. It will show on:
+
+- Favicon
+- Navbar before the project name
+
 
 ### menu 
 
@@ -78,7 +104,7 @@ the top-right menu links for custom domains. It is an object with the labels (te
 
 ### pages
 
-Where the data should be searched. Defaults to `readme.md`. It IS case insensitive. Example:
+Where the data should be searched. Defaults to `heroreadme.md`. It IS case insensitive. Example:
 
 ```json
 {
