@@ -7,7 +7,7 @@ The official docs for [Documentation Page](https://documentation.page/). Talk ab
 
 There is a high chance that your documentation already works properly! Try it out by searching your repos in our homepage:
 
-https://documentation.page/
+[https://documentation.page/](https://documentation.page/)
 
 You can organize your documentation broadly in three different ways:
 
