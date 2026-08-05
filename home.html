@@ -1,0 +1,922 @@
+<style>
+  body {
+    background: var(--page);
+  }
+  .home h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .home h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .home h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .home p {
+    margin: 10px 0;
+  }
+  .home section {
+    margin-bottom: 40px;
+  }
+  .home .preview {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+  }
+  .home video.preview {
+    box-shadow: var(--outline);
+  }
+  .home .description > *:last-child {
+    margin-bottom: 0;
+  }
+  .home .description p {
+    margin: 12px 0;
+  }
+  .home .split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+  }
+  .home .split > * {
+    flex: 1 1 340px;
+  }
+  .home .hero h1 {
+    max-width: 520px;
+  }
+  .home .hero h2 {
+    color: var(--text-soft);
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 16px;
+  }
+  .home .hero form {
+    max-width: 450px;
+    position: relative;
+    margin-top: 10px;
+  }
+  .home .hero form label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 14px;
+  }
+  .home .hero form input {
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .home .hero form button {
+    width: 130px;
+    height: 44px;
+    margin: 0 0 0 -130px;
+    padding: 0;
+    vertical-align: middle;
+    border-radius: 0 0.2em 0.2em 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .hero form button span {
+    display: none;
+    margin-right: 5px;
+  }
+  .home .hero form img {
+    width: 22px;
+    margin: 1px -3px 0 5px;
+    filter: brightness(100);
+  }
+  @media (min-width: 400px) {
+    .home .hero form button {
+      width: 160px;
+      margin-left: -160px;
+    }
+    .home .hero form button span {
+      display: inline;
+    }
+  }
+  .home .examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .home .examples a {
+    flex: 1 1 200px;
+    padding: 12px 20px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  .home .examples a:hover {
+    border-color: var(--line-strong);
+  }
+  .home .plan {
+    background: var(--card);
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+  }
+  .home .plan h3 {
+    line-height: 1;
+  }
+  .home .plan ul {
+    margin: 15px 0;
+    list-style-type: "✦ ";
+    padding-left: 18px;
+  }
+  .home .plan .button {
+    width: 100%;
+  }
+  .home .plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .home .plans > * {
+    flex: 1 1 280px;
+  }
+  .home .pricing-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .home .faq {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+  }
+  .home .faq > * {
+    flex: 1 1 400px;
+  }
+</style>
+
+<div class="home">
+  <section class="hero split">
+    <div>
+      <h1>
+        Gorgeous documentation
+        <span class="hide show-1200"> website</span> for your projects
+      </h1>
+      <h2>Generated from your Github files</h2>
+
+      <p>✅ Smooth navigation and search</p>
+      <p>✅ No setup needed, adapts to your workflow</p>
+      <p>✅ Branding, themes and custom domains</p>
+
+      <br />
+
+      <form>
+        <label for="search">Github Repo:</label>
+        <input id="search" name="search" placeholder="sindresorhus/meow" />
+        <button class="primary">
+          <span>Read</span> Docs <img src="/icons/arrow.svg" alt="" />
+        </button>
+      </form>
+    </div>
+    <div>
+      <img
+        class="preview"
+        src="/assets/preview.webp"
+        alt="Screenshot of how a page looks with a project"
+      />
+    </div>
+  </section>
+
+  <section class="examples">
+    <a href="/github/chalk/chalk/">chalk/chalk</a>
+    <a href="/github/sindresorhus/meow/">sindresorhus/meow</a>
+    <a href="/github/terkelg/prompts">terkelg/prompts</a>
+    <a href="https://statux.dev/" target="_blank">https://statux.dev/</a>
+  </section>
+
+  <br />
+
+  <section class="split">
+    <div class="description">
+      <h2>Users will read your docs 📖</h2>
+      <p>
+        Our main goal is to make it as easy as possible to read and understand
+        your documentation.
+      </p>
+      <p>
+        How? Your text takes the main stage for the users to read.<br
+          class="hide show-1200"
+        />
+        No distractions, no popups, no cookies, just clear text.
+      </p>
+      <p><a href="/github/franciscop/statux" class="button">See demo</a></p>
+    </div>
+    <div>
+      <img class="preview" src="/hero.svg" alt="" />
+    </div>
+  </section>
+
+  <br />
+
+  <section class="split">
+    <div class="description">
+      <h2>Easy to explore and learn 🔎</h2>
+      <p>
+        Built-in index and search to easily navigate your project,<br
+          class="hide show-1200"
+        />from the broad strokes to the finest details.
+      </p>
+      <p>
+        Devs now have the tools to solve their own problems. Enjoy reduced
+        support time and keep writing great code 💪
+      </p>
+      <p><a href="/" class="button">Try searching</a></p>
+    </div>
+    <div>
+      <video class="preview" src="/navigation.mp4" controls loop></video>
+    </div>
+  </section>
+
+  <br />
+
+  <section class="split">
+    <div class="description">
+      <h2>Adapts to your needs 🔧</h2>
+      <p>
+        Whether you prefer to keep your docs as a single readme or multiple
+        files in a folder, we follow your workflow.
+      </p>
+      <p>
+        But if you want more control on the details you can provide some
+        configuration! It's all well documented:
+      </p>
+      <p>
+        <a href="/documentation#how-it-works" class="button">How it works</a>
+        <a href="/documentation#configuration" class="button">Configuration</a>
+      </p>
+    </div>
+    <div>
+      <img class="preview" src="/landing3.webp" alt="" />
+    </div>
+  </section>
+
+  <br />
+
+  <section class="split">
+    <div class="description">
+      <h2>Custom branding 🦾</h2>
+      <p>
+        All projects are available for free in Documentation Page for the users
+        to discover and learn about.
+      </p>
+      <p>
+        Upgrading to "Important Project" you can put your own domain and the
+        project brand takes the front page.
+      </p>
+      <p>
+        <a href="/#pricing" class="button primary">Upgrade plan</a>
+        <a href="/#pricing" class="button">See Configuration</a>
+      </p>
+    </div>
+    <div>
+      <img class="preview" src="/going-pro.webp" alt="" />
+    </div>
+  </section>
+
+  <br /><br />
+
+  <section>
+    <div class="pricing-head">
+      <h2 id="pricing">Pricing</h2>
+      <div>
+        <label>
+          <input name="period" type="radio" value="monthly" checked />
+          <span class="button toggle">Monthly</span>
+        </label>
+        <label>
+          <input name="period" type="radio" value="yearly" />
+          <span class="button toggle">Yearly</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal">
+    <input id="get-notified" type="checkbox" />
+    <label for="get-notified" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Private Beta</h3>
+        <label for="get-notified" class="close">&times;</label>
+      </header>
+      <section class="content">
+        Thanks for the interest! Right now we are working with some selected
+        open source projects to iron out the experience. But please subscribe to
+        get notified when we launch publicly!
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="http://eepurl.com/cmGxZv"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Get into the Public Beta</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="nav-search" type="checkbox" />
+    <label for="nav-search" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Full navigation and search</h3>
+        <label for="nav-search" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          First we parse all of the documentation in your repository, as
+          indicated
+          <a href="/documentation#configuration">by your configuration</a> or by
+          reading the "readme.md" + "/documentation/" folders.
+        </p>
+        <p>
+          Then we parse the content to understand it better and build the side
+          navigation and search. We display it all in a single page which gives
+          the users a great experience.
+        </p>
+      </section>
+      <footer>
+        <a class="button primary" href="/documentation#autogenerated-navigation"
+          >The Navigation Docs</a
+        >
+        <a class="button primary" href="/documentation#autogenerated-navigation"
+          >The Search Docs</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="basic-config" type="checkbox" />
+    <label for="basic-config" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Basic Configuration</h3>
+        <label for="basic-config" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          For more advanced situations you can configure how we parse your
+          project/repo and the basic information of it. It is notable that you
+          <em>don't actually need</em> any configuration for the free version!
+        </p>
+        <p>
+          Head over the "Configuration" documentation and search for the options
+          <em>not</em> tagged as "Pro":
+        </p>
+      </section>
+      <footer>
+        <a class="button primary" href="/documentation#configuration"
+          >Configuration Docs</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="diy-docs" type="checkbox" />
+    <label for="diy-docs" class="overlay"></label>
+    <article>
+      <header>
+        <h3>DIY Documentation</h3>
+        <label for="diy-docs" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          We have written the documentation on how to use Documentation Page
+          (how meta!)! They should be able to help you getting started and
+          configuring your project.
+        </p>
+        <p>
+          However for the free plan we don't offer any kind of extra 1-1
+          support. Please feel free to ask in StackOverflow/Reddit/etc for help.
+        </p>
+      </section>
+      <footer>
+        <a class="button primary" href="/documentation">Documentation</a>
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="long-refresh" type="checkbox" />
+    <label for="long-refresh" class="overlay"></label>
+    <article>
+      <header>
+        <h3>24h refresh rate</h3>
+        <label for="long-refresh" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          We are caching projects at multiple levels for performance,
+          scalability, Github API limits, etc. This way we can serve more
+          projects easily!
+        </p>
+        <p>
+          This means that your project might take up to 24h to reflect changes
+          in Documentation Page for the free version. If you upgrade, we can
+          spare a bit more of time of our servers for you!
+        </p>
+      </section>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="custom-domain" type="checkbox" />
+    <label for="custom-domain" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Custom Domain</h3>
+        <label for="custom-domain" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Serve your docs from your own domain like
+          <code>docs.yourproject.com</code> instead of a
+          <code>documentation.page/github/...</code> URL. You get a clean,
+          branded home for your documentation that you fully control.
+        </p>
+        <p>
+          We handle the hosting and HTTPS, so you just point a CNAME and send us
+          the domain.
+        </p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Contact us</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="white-label" type="checkbox" />
+    <label for="white-label" class="overlay"></label>
+    <article>
+      <header>
+        <h3>White Label page</h3>
+        <label for="white-label" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Make the page truly yours: your logo in the navbar, your project name
+          as the tab title, and none of our branding taking the spotlight. Your
+          content and identity take the front page.
+        </p>
+        <p>
+          Great for products and teams that want the docs to feel like a
+          first-party part of their site.
+        </p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://react-test.dev/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >See an example</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="full-config" type="checkbox" />
+    <label for="full-config" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Full Configuration</h3>
+        <label for="full-config" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Unlock every configuration option, including the ones tagged "Pro",
+          such as custom menus, page ordering, branding, and more fine-grained
+          control over how we parse and present your repo.
+        </p>
+        <p>
+          The free plan works with zero config; this is for when you want the
+          details exactly your way.
+        </p>
+      </section>
+      <footer>
+        <a class="button primary" href="/documentation#configuration"
+          >Configuration Docs</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="community-support" type="checkbox" />
+    <label for="community-support" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Community Support</h3>
+        <label for="community-support" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Get help directly from us so you're not on your own when setting
+          things up or tweaking your configuration.
+        </p>
+        <p>
+          Ask questions, report issues, and get answers from the people building
+          Documentation Page.
+        </p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Get in touch</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="refresh-10min" type="checkbox" />
+    <label for="refresh-10min" class="overlay"></label>
+    <article>
+      <header>
+        <h3>10 min refresh rate</h3>
+        <label for="refresh-10min" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Your changes show up faster. Instead of waiting up to 24h, updates to
+          your repo are reflected within about 10 minutes.
+        </p>
+        <p>
+          We reserve a bit more of our caching budget for your project so your
+          docs stay fresh.
+        </p>
+      </section>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="private-project" type="checkbox" />
+    <label for="private-project" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Private Project</h3>
+        <label for="private-project" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Publish docs from a private repository. We read it with authorized
+          access, so your source stays private while your documentation goes
+          live.
+        </p>
+        <p>
+          Ideal for internal tools, closed-source products, or docs you're not
+          ready to open up.
+        </p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Contact us</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="setup-help" type="checkbox" />
+    <label for="setup-help" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Setup Help</h3>
+        <label for="setup-help" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          We help you get set up personally, configuring your repo, custom
+          domain, branding, and page structure, so you're up and running without
+          the trial and error.
+        </p>
+        <p>
+          Hand us the repo and tell us what you want; we'll get it looking
+          right.
+        </p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Contact us</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="consulting" type="checkbox" />
+    <label for="consulting" class="overlay"></label>
+    <article>
+      <header>
+        <h3>1h consulting/month</h3>
+        <label for="consulting" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          One hour of documentation consulting each month. We'll review your
+          docs and suggest concrete improvements to structure, clarity, and
+          developer experience.
+        </p>
+        <p>
+          Good docs are hard; use our experience to make yours genuinely great.
+        </p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Contact us</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="priority-support" type="checkbox" />
+    <label for="priority-support" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Priority support</h3>
+        <label for="priority-support" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          Jump to the front of the queue. Your questions and issues get answered
+          first, with a direct line to us for anything urgent.
+        </p>
+        <p>Less waiting, faster resolutions, real humans.</p>
+      </section>
+      <footer>
+        <a
+          class="button primary"
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          >Contact us</a
+        >
+      </footer>
+    </article>
+  </div>
+
+  <div class="modal">
+    <input id="immediate-refresh" type="checkbox" />
+    <label for="immediate-refresh" class="overlay"></label>
+    <article>
+      <header>
+        <h3>Immediate refresh</h3>
+        <label for="immediate-refresh" class="close">&times;</label>
+      </header>
+      <section class="content">
+        <p>
+          No waiting at all: changes to your repo are reflected right away. Push
+          an update and your live docs match within moments.
+        </p>
+        <p>The fastest refresh we offer, for teams that ship often.</p>
+      </section>
+    </article>
+  </div>
+
+  <section class="plans">
+    <div>
+      <div class="plan">
+        <h3>Open Source</h3>
+        <ul>
+          <li>Open Source project</li>
+          <li>
+            Full navigation and search
+            <label for="nav-search"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            Basic Configuration
+            <label for="basic-config"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            DIY Documentation
+            <label for="diy-docs"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            24 hour refresh rate
+            <label for="long-refresh"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+        </ul>
+        <a href="/documentation#getting-started" class="button"
+          >$0 - Getting Started</a
+        >
+      </div>
+    </div>
+
+    <div>
+      <div class="plan">
+        <h3>Private Projects</h3>
+        <ul>
+          <li>
+            Custom Domain
+            <label for="custom-domain"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            White Label page
+            <label for="white-label"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            Full Configuration
+            <label for="full-config"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            Community Support
+            <label for="community-support"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            10 min refresh rate
+            <label for="refresh-10min"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+        </ul>
+        <label class="button primary monthly" for="get-notified"
+          >$5 / month</label
+        >
+        <label class="button primary yearly hidden" for="get-notified"
+          >$30 / year</label
+        >
+      </div>
+    </div>
+
+    <div>
+      <div class="plan">
+        <h3>Enterprise Project</h3>
+        <ul>
+          <li>
+            Private Project
+            <label for="private-project"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            Setup Help
+            <label for="setup-help"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            1h consulting/month
+            <label for="consulting"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            Priority support
+            <label for="priority-support"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+          <li>
+            Immediate refresh
+            <label for="immediate-refresh"
+              ><img class="icon" alt="" src="/info.svg"
+            /></label>
+          </li>
+        </ul>
+        <label class="button primary monthly" for="get-notified"
+          >$100 / month</label
+        >
+        <label class="button primary yearly hidden" for="get-notified"
+          >$1000 / year</label
+        >
+      </div>
+    </div>
+  </section>
+
+  <br /><br />
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <section class="faq">
+    <div>
+      <h3>Why is yearly so cheap?</h3>
+      <p>
+        Our goal is to improve the documentation across the web, so we priced
+        things as low as possible! We wanted to do $3/month or $30/year, but
+        because of micro-transaction costs the lowest is $5/month.
+        <a href="/about">Read more about us</a>.
+      </p>
+    </div>
+
+    <div>
+      <h3>How do I cancel?</h3>
+      <p>
+        Contact me directly at
+        <a
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          ><strong>francisco.io</strong></a
+        >
+        and I'll cancel the subscription associated with your account.
+      </p>
+    </div>
+
+    <div>
+      <h3>How do I point my custom domain?</h3>
+      <p>
+        Register your domain, subscribe to a paid plan and
+        <a
+          href="https://francisco.io/"
+          target="_blank"
+          rel="noreferrer noopener"
+          ><strong>contact me at francisco.io</strong></a
+        >
+        with your custom domain and repo. We'll reply with the CNAME to use.
+        Read the <a><strong>full documentation</strong></a
+        >.
+      </p>
+    </div>
+
+    <div>
+      <h3>Is this a static site generator?</h3>
+      <p>
+        <strong>No.</strong> A static site generator builds your website into a
+        set of static files that then you host. This unfortunate pollutes your
+        Git repo, making it difficult for users to search your repo and do PRs.
+      </p>
+    </div>
+
+    <div>
+      <h3>How does it compare to FooBar?</h3>
+      <p>Other docs websites generally sufer some of these:</p>
+      <ul>
+        <li>
+          Outdated styles and no mobile version. Lots of people use their phone
+          today, even to read github projects.
+        </li>
+        <li>
+          Need to learn a new system to make it work, or *gasps* you have to use
+          their bad editor. We ❤️ markdown.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Is Documentation Page Open Source?</h3>
+      <p>
+        <strong>No.</strong> I love and
+        <a href="https://github.com/franciscop">write a lot of OSS myself</a>
+        but if I have any hope of making this sustainable I'm going to start as
+        closed source.
+      </p>
+    </div>
+  </section>
+</div>

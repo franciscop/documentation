@@ -1,0 +1,27 @@
+{
+  "name": "Documentation Page",
+  "title": "Documentation Page",
+  "description": "Gorgeous documentation website for your projects, automatically generated from your Github files",
+  "logo": "/favicon.svg",
+  "social": "https://documentation.page/social.jpg",
+  "menu": {
+    "About": "about.html",
+    "Documentation": "/documentation",
+    "Blog": "/blog",
+    "Tutorials": "/tutorials",
+    "Pricing": "/#pricing"
+  },
+  "home": "home.html",
+  "documentation": {
+    "index": "./documentation/readme.md",
+    "1. Conventions": "./documentation/conventions.md",
+    "2. Configuration": "./documentation/configuration.md",
+    "3. Branding": "./documentation/branding.md",
+    "4. Blog": "./documentation/blog.md",
+    "5. Tutorials": "./documentation/tutorials.md",
+    "6. How it works": "./documentation/how-it-works.md",
+    "7. Compare with": "./documentation/compare-with.md",
+    "8. Pricing": "./documentation/pricing.md",
+    "9. Syntax Test": "./documentation/syntax-test.md"
+  }
+}
