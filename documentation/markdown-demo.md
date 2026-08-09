@@ -1,6 +1,6 @@
-# Syntax Test
+# Markdown Demo
 
-This page is a **fully-fledged syntax check**: it exercises every markdown feature the renderer supports, gathered in one place so we can eyeball the output. If something renders wrong here, it renders wrong everywhere.
+Every markdown feature the renderer supports, on one page. Write any of this in your own docs and it will look exactly as it does here.
 
 ## Headings
 
@@ -135,6 +135,13 @@ Hidden content, revealed on toggle, with `code`, and a short list:
 
 - one
 - two
+
+</details>
+
+<details open>
+<summary>Open by default</summary>
+
+Add `open` to the tag and the section starts expanded.
 
 </details>
 
