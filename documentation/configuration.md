@@ -229,6 +229,18 @@ Give it an object instead to name each tutorial and set its order by hand, where
 
 See the dedicated [Tutorials](/documentation/tutorials) guide for the per-tutorial front-matter (`title`, `description`, `date`, `social`), the sensible default for each, and how tutorials are ordered.
 
+## llms
+
+A path to a markdown file to serve at [`/llms.txt`](https://llmstxt.org/), the clean single-file version of your docs for AI assistants. Use it when you want to curate that file by hand:
+
+```json
+{
+  "llms": "llms.txt"
+}
+```
+
+When omitted, we serve a [detected `llms.txt` file](/documentation/conventions#llms) if your repository has one, and otherwise generate it automatically from your documentation, so `/llms.txt` always works with no configuration.
+
 ## home and landing
 
 For custom domains you can replace the auto-generated homepage with your own:

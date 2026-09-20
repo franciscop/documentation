@@ -14,6 +14,7 @@ Everything below is detected automatically from a **public** repository, no conf
 | `documentation` | A `documentation/` folder, otherwise `readme.md`.    | [documentation](/documentation/configuration#documentation) |
 | `blog`          | A `blog/` folder.                                    | [blog](/documentation/configuration#blog) |
 | `tutorials`     | A `tutorials/` folder.                               | [tutorials](/documentation/configuration#tutorials) |
+| `llms`          | An `llms.txt` file, otherwise built from your docs.  | [llms](/documentation/configuration#llms) |
 | `menu`          | Not detected, configuration only.                    | [menu](/documentation/configuration#menu) |
 
 ## name
@@ -52,6 +53,12 @@ If your repository has a top-level **`blog/`** folder, its markdown files are pu
 ## tutorials
 
 If your repository has a top-level **`tutorials/`** folder, its markdown files are published as tutorials automatically: the index at `/tutorials`, each tutorial at `/tutorials/<slug>`, and a *Tutorials* link added to the navigation. Point at a different folder with the [`tutorials`](/documentation/configuration#tutorials) option, and see the [Tutorials](/documentation/tutorials) guide for the per-tutorial front-matter (`title`, `description`, `date`, `social`) and how tutorials are ordered.
+
+## llms
+
+Your site automatically serves an [`/llms.txt`](https://llmstxt.org/), a single clean markdown file of your entire documentation that AI assistants can read in one request. By default we build it from the same markdown we render, so it stays in sync with every push and needs no setup.
+
+To take over the file yourself, add an **`llms.txt`** to your repository (we prefer one closer to the root, like the `logo` and `social` files) and we serve it verbatim at `/llms.txt` instead of the generated one. Point at a specific file with the [`llms`](/documentation/configuration#llms) option.
 
 ## menu
 
