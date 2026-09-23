@@ -44,7 +44,7 @@ On a paid plan you can serve your docs from your own domain, like `docs.yourproj
 3. We reply with the `CNAME` record to add at your DNS provider.
 4. Add a [`menu`](/documentation/configuration#menu) to your configuration so your site has top navigation, and optionally a [`home` or `landing`](/documentation/configuration#home-and-landing) page.
 
-Your documentation is then served at the root of your domain, with your generated docs available under `/documentation`.
+Your documentation is then served at the root of your domain. With a `home` or `landing` page, that page takes the root and your docs move under `/documentation`.
 
 ## sitemap.xml and llms.txt
 

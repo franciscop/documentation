@@ -165,16 +165,18 @@ Each **key** becomes the page's name in the sidebar and its URL:
 
 - A leading `N. ` (a number, a dot, and a space) is **stripped**: it only sets the order, so `1. Getting Started` is shown as **Getting Started**. The rest of the key is kept verbatim.
 - The URL is that name, lowercased and slugified: `Getting Started` → `getting-started`.
-- The special key **`index`** is the landing page, served at `/documentation` itself (no slug). If there is no `index` key, the first entry becomes the landing instead.
+- The special key **`index`** is the landing page, with no slug. If there is no `index` key, the first entry becomes the landing instead.
 
-So the example above produces:
+Where the pages live depends on whether you have a [`home` or `landing`](#home-and-landing) page. Without one, your docs are the site, so they are served at the root. With one, the root is taken by that page and your docs move under `/documentation`. The example above produces:
 
-| Key                  | Source                         | Page URL                         |
-|----------------------|--------------------------------|----------------------------------|
-| `index`              | `readme.md`                    | `/documentation`                 |
-| `1. Getting Started` | `manual/getting-started.md`    | `/documentation/getting-started` |
-| `2. API`             | `src/api` + `src/methods`      | `/documentation/api`             |
-| `3. Examples`        | `examples`                     | `/documentation/examples`        |
+| Key                  | Source                      | Without `home`     | With `home` or `landing`         |
+|----------------------|-----------------------------|--------------------|----------------------------------|
+| `index`              | `readme.md`                 | `/`                | `/documentation`                 |
+| `1. Getting Started` | `manual/getting-started.md` | `/getting-started` | `/documentation/getting-started` |
+| `2. API`             | `src/api` + `src/methods`   | `/api`             | `/documentation/api`             |
+| `3. Examples`        | `examples`                  | `/examples`        | `/documentation/examples`        |
+
+Link between your pages with these URLs, such as `[the API](/api#methods)`. Without a `home`, the `/documentation` versions redirect to the root, so older links keep working. Avoid keys whose URL clashes with a built-in section (`blog`, `tutorials`) or a [published HTML page](#publishing-an-html-page): those take precedence and the doc page cannot be reached.
 
 Within each page, the sidebar sub-navigation is built automatically from its `##` headings.
 
@@ -242,4 +244,4 @@ For custom domains you can replace the auto-generated homepage with your own:
 }
 ```
 
-With either one set, your generated documentation moves to **`/documentation`**. Without them, the root of your domain shows your documentation directly.
+With either one set, your generated documentation moves to **`/documentation`**. Without them, your documentation is the site: the landing page is served at the root and every other page at `/<slug>`, as shown in [multiple pages](#an-object-multiple-pages).
