@@ -51,7 +51,7 @@ Your documentation is then served at the root of your domain. With a `home` or `
 On a custom domain we automatically serve two extra files at the root, so search engines and AI tools can discover your content. They are generated for you, kept up to date, and require no configuration.
 
 - **`/sitemap.xml`**: every page of your site (docs, blog posts and extra pages), for search engines.
-- **`/llms.txt`**: your full documentation as a single markdown file, for LLMs and AI assistants.
+- **`/llms.txt`**: your full documentation as a single markdown file, for LLMs and AI assistants. It should be an API reference with links to the full domain.
 
 Both are available only on custom domains.
 
