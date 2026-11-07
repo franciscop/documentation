@@ -140,7 +140,12 @@ An array of files and folders, all **concatenated into a single page** in the or
 
 ```json
 {
-  "documentation": ["readme.md", "src/methods", "src/jest-matchers", "src/examples"]
+  "documentation": [
+    "readme.md",
+    "src/methods",
+    "src/jest-matchers",
+    "src/examples"
+  ]
 }
 ```
 
@@ -170,7 +175,7 @@ Each **key** becomes the page's name in the sidebar and its URL:
 Where the pages live depends on whether you have a [`home` or `landing`](#home-and-landing) page. Without one, your docs are the site, so they are served at the root. With one, the root is taken by that page and your docs move under `/documentation`. The example above produces:
 
 | Key                  | Source                      | Without `home`     | With `home` or `landing`         |
-|----------------------|-----------------------------|--------------------|----------------------------------|
+| -------------------- | --------------------------- | ------------------ | -------------------------------- |
 | `index`              | `readme.md`                 | `/`                | `/documentation`                 |
 | `1. Getting Started` | `manual/getting-started.md` | `/getting-started` | `/documentation/getting-started` |
 | `2. API`             | `src/api` + `src/methods`   | `/api`             | `/documentation/api`             |
@@ -187,7 +192,7 @@ When `documentation` is omitted entirely, we fall back to the [conventions](/doc
 
 ## blog
 
-Publish a blog alongside your docs. Give it the folder (or leave it out and drop a `blog/` folder into your repo). Each markdown file in that folder becomes a post at `/blog/<slug>`, with the index at `/blog` and a *Blog* link added to the navigation.
+Publish a blog alongside your docs. Give it the folder (or leave it out and drop a `blog/` folder into your repo). Each markdown file in that folder becomes a post at `/blog/<slug>`, with the index at `/blog` and a _Blog_ link added to the navigation.
 
 ```json
 {
@@ -210,7 +215,7 @@ See the dedicated [Blog](/documentation/blog) guide for the per-post front-matte
 
 ## tutorials
 
-Publish tutorials alongside your docs. Give it the folder (or leave it out and drop a `tutorials/` folder into your repo). Each markdown file in that folder becomes a tutorial at `/tutorials/<slug>`, with the index at `/tutorials` and a *Tutorials* link added to the navigation.
+Publish tutorials alongside your docs. Give it the folder (or leave it out and drop a `tutorials/` folder into your repo). Each markdown file in that folder becomes a tutorial at `/tutorials/<slug>`, with the index at `/tutorials` and a _Tutorials_ link added to the navigation.
 
 ```json
 {

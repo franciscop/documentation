@@ -10,7 +10,7 @@ With Documentation Page there is nothing to build and nothing extra committed to
 
 ## Static Sites
 
-Tools like docs frameworks and site generators are powerful, but they ask you to learn their system, adopt their file layout, and run their build. Documentation Page follows *your* structure instead: a single `readme.md`, a `documentation/` folder, or a small [configuration](/documentation/configuration) file when you want more control.
+Tools like docs frameworks and site generators are powerful, but they ask you to learn their system, adopt their file layout, and run their build. Documentation Page follows _your_ structure instead: a single `readme.md`, a `documentation/` folder, or a small [configuration](/documentation/configuration) file when you want more control.
 
 ## A hand-built site
 

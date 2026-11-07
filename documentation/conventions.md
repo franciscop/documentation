@@ -4,17 +4,17 @@ This is the most powerful bit: we crawl your repository looking for a handful of
 
 Everything below is detected automatically from a **public** repository, no config required. Each item links to its matching [configuration](/documentation/configuration) option, which always takes precedence over what we detect.
 
-| key             | detected from                                        | override |
-|-----------------|------------------------------------------------------|----------|
-| `name`          | The Github repo `name`, cleaned up.                  | [name](/documentation/configuration#name) |
-| `title`         | The same as `name` by default.                       | [title](/documentation/configuration#title) |
-| `description`   | The Github repo `description`.                       | [description](/documentation/configuration#description) |
-| `logo`          | A file named `favicon` or `logo`.                    | [logo](/documentation/configuration#logo) |
-| `social`        | A file named `social`, or the Github social preview. | [social](/documentation/configuration#social) |
+| key             | detected from                                        | override                                                    |
+| --------------- | ---------------------------------------------------- | ----------------------------------------------------------- |
+| `name`          | The Github repo `name`, cleaned up.                  | [name](/documentation/configuration#name)                   |
+| `title`         | The same as `name` by default.                       | [title](/documentation/configuration#title)                 |
+| `description`   | The Github repo `description`.                       | [description](/documentation/configuration#description)     |
+| `logo`          | A file named `favicon` or `logo`.                    | [logo](/documentation/configuration#logo)                   |
+| `social`        | A file named `social`, or the Github social preview. | [social](/documentation/configuration#social)               |
 | `documentation` | A `documentation/` folder, otherwise `readme.md`.    | [documentation](/documentation/configuration#documentation) |
-| `blog`          | A `blog/` folder.                                    | [blog](/documentation/configuration#blog) |
-| `tutorials`     | A `tutorials/` folder.                               | [tutorials](/documentation/configuration#tutorials) |
-| `menu`          | Not detected, configuration only.                    | [menu](/documentation/configuration#menu) |
+| `blog`          | A `blog/` folder.                                    | [blog](/documentation/configuration#blog)                   |
+| `tutorials`     | A `tutorials/` folder.                               | [tutorials](/documentation/configuration#tutorials)         |
+| `menu`          | Not detected, configuration only.                    | [menu](/documentation/configuration#menu)                   |
 
 ## name
 
@@ -47,11 +47,11 @@ A folder is read recursively and every `.md` file inside it is concatenated into
 
 ## blog
 
-If your repository has a top-level **`blog/`** folder, its markdown files are published as a blog automatically: the index at `/blog`, each post at `/blog/<slug>`, and a *Blog* link added to the navigation. Point at a different folder with the [`blog`](/documentation/configuration#blog) option, and see the [Blog](/documentation/blog) guide for the per-post front-matter (`title`, `description`, `date`, `social`) and how posts are ordered.
+If your repository has a top-level **`blog/`** folder, its markdown files are published as a blog automatically: the index at `/blog`, each post at `/blog/<slug>`, and a _Blog_ link added to the navigation. Point at a different folder with the [`blog`](/documentation/configuration#blog) option, and see the [Blog](/documentation/blog) guide for the per-post front-matter (`title`, `description`, `date`, `social`) and how posts are ordered.
 
 ## tutorials
 
-If your repository has a top-level **`tutorials/`** folder, its markdown files are published as tutorials automatically: the index at `/tutorials`, each tutorial at `/tutorials/<slug>`, and a *Tutorials* link added to the navigation. Point at a different folder with the [`tutorials`](/documentation/configuration#tutorials) option, and see the [Tutorials](/documentation/tutorials) guide for the per-tutorial front-matter (`title`, `description`, `date`, `social`) and how tutorials are ordered.
+If your repository has a top-level **`tutorials/`** folder, its markdown files are published as tutorials automatically: the index at `/tutorials`, each tutorial at `/tutorials/<slug>`, and a _Tutorials_ link added to the navigation. Point at a different folder with the [`tutorials`](/documentation/configuration#tutorials) option, and see the [Tutorials](/documentation/tutorials) guide for the per-tutorial front-matter (`title`, `description`, `date`, `social`) and how tutorials are ordered.
 
 ## menu
 

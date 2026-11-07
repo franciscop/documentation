@@ -12,7 +12,7 @@ A blog turns on automatically if your repo has a top-level **`blog/`** folder. Y
 }
 ```
 
-Once enabled, the blog index is served at **`/blog`**, each post at **`/blog/<slug>`** (the slug is the file name, lowercased and hyphenated, so `2. Dark mode.md` is served at `/blog/2-dark-mode`), and a *Blog* link appears in the navigation.
+Once enabled, the blog index is served at **`/blog`**, each post at **`/blog/<slug>`** (the slug is the file name, lowercased and hyphenated, so `2. Dark mode.md` is served at `/blog/2-dark-mode`), and a _Blog_ link appears in the navigation.
 
 ## Writing a post
 

@@ -12,7 +12,7 @@ The title above is an `h1`; the remaining levels follow.
 
 ## Text formatting
 
-A paragraph with **bold**, *italic*, ***bold italic***, `inline code`, ~~strikethrough~~ and a [link](https://documentation.page/). This sentence runs a little longer so we can check the line height and how comfortably the text wraps once it reaches the edge of the column and continues onto the next line.
+A paragraph with **bold**, _italic_, _**bold italic**_, `inline code`, ~~strikethrough~~ and a [link](https://documentation.page/). This sentence runs a little longer so we can check the line height and how comfortably the text wraps once it reaches the edge of the column and continues onto the next line.
 
 ## Links
 
@@ -22,7 +22,7 @@ Every flavour of link, to check colour, underline and hover states:
 - Reference-style link: [reference link][ref] (defined once, reused)
 - Angle-bracket autolink: <https://documentation.page/>
 - Email autolink: <hello@documentation.page>
-- Bare URLs in text are *not* auto-linked, so wrap them: <https://documentation.page/documentation>
+- Bare URLs in text are _not_ auto-linked, so wrap them: <https://documentation.page/documentation>
 - Relative link to another page: [the Configuration page](/documentation/configuration)
 - Link to a heading on another page: [jump to `name`](/documentation/configuration#name)
 - Link wrapping `inline code`: [`package.json`](/documentation/configuration)
@@ -80,6 +80,7 @@ Headings inside a code block must render literally, and must not affect the real
 
 ```md
 # Not a real heading
+
 ## Also not real
 ```
 
@@ -97,11 +98,11 @@ $$
 
 ## Tables
 
-| Feature     | Supported | Notes                |
-|-------------|-----------|----------------------|
-| Headings    | Yes       | `h1`–`h4`            |
-| Code blocks | Yes       | Syntax highlighted   |
-| Tables      | Yes       | `border-collapse`    |
+| Feature     | Supported | Notes              |
+| ----------- | --------- | ------------------ |
+| Headings    | Yes       | `h1`–`h4`          |
+| Code blocks | Yes       | Syntax highlighted |
+| Tables      | Yes       | `border-collapse`  |
 
 ## Blockquotes
 

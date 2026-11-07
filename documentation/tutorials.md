@@ -12,7 +12,7 @@ Tutorials turn on automatically if your repo has a top-level **`tutorials/`** fo
 }
 ```
 
-Once enabled, the tutorials index is served at **`/tutorials`**, each tutorial at **`/tutorials/<slug>`** (the slug is the file name, lowercased and hyphenated, so `3. File uploads.md` is served at `/tutorials/3-file-uploads`), and a *Tutorials* link appears in the navigation.
+Once enabled, the tutorials index is served at **`/tutorials`**, each tutorial at **`/tutorials/<slug>`** (the slug is the file name, lowercased and hyphenated, so `3. File uploads.md` is served at `/tutorials/3-file-uploads`), and a _Tutorials_ link appears in the navigation.
 
 ## Writing a tutorial
 

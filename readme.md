@@ -6,13 +6,13 @@ what Documentation Page builds from a repository.
 
 ## Layout
 
-| Path | What it becomes |
-| ---- | --------------- |
+| Path                      | What it becomes                                    |
+| ------------------------- | -------------------------------------------------- |
 | `documentation.page.json` | The site configuration: name, menu, and page order |
-| `documentation/` | The pages under `/documentation` |
-| `documentation/home.html` | The front page at `/` |
-| `blog/` | The posts under `/blog`, newest first |
-| `tutorials/` | The posts under `/tutorials` |
+| `documentation/`          | The pages under `/documentation`                   |
+| `documentation/home.html` | The front page at `/`                              |
+| `blog/`                   | The posts under `/blog`, newest first              |
+| `tutorials/`              | The posts under `/tutorials`                       |
 
 ## Editing
 
